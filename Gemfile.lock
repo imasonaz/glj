@@ -200,7 +200,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mysql2
-  paperclip
+  paperclip (~> 4.3)
   pry-rails
   rails (= 4.2.5)
   rspec
