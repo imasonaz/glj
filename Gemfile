@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pry-rails'
 gem "paperclip", "~> 4.3"
 gem 'devise'
+gem 'haml-rails'
 
 group :development, :test do
   gem 'mysql2'
