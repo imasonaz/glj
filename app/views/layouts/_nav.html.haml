@@ -1,8 +1,12 @@
 .navbar.navbar-default.navbar-fixed-top
   .container{style: "padding-bottom:30px;"}
     .navbar-header
-      %a.navbar-brand{:href => "/list", target: "blank"}
-        = image_tag("logo.png")
+      - if user_signed_in?
+        %a.navbar-brand{:href => "/list", target: "blank"}
+          = image_tag("logo.png")
+      - else
+        .navbar-brand
+          = image_tag("logo.png")
       %ul.nav.navbar-nav.navbar-right
         %li.active.pull-right{style: "padding-right:30px;"}
           - if user_signed_in?
