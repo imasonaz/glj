@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     authenticated :user do
       root 'articles#index', as: :authenticated_root
       match 'users/sign_out' => "devise/sessions#destroy", via: [:get, :post]
+      match '/list' => "articles#list", via: [:get]
       resources :articles
     end
 
