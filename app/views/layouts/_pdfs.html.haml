@@ -1,4 +1,8 @@
 .container{style: "margin-top:30px;"}
   - Article.all.each do |article|
+<<<<<<< HEAD
     = link_to "Volume #{article.volume} - Issue #{article.issue} : #{article.title} by #{article.author}", "/#{article.document_file_name}", format: :pdf
+=======
+    = link_to "#{article.document_file_name}", "/documents/#{article.document_file_name}", format: :pdf
+>>>>>>> 967f3f5ae6e1b55ae4d8045352773dd645f809db
     %br

@@ -14,9 +14,9 @@ gem 'devise'
 gem 'duktape'
 gem 'haml-rails'
 gem 'simple_form'
+gem 'mysql2'
 
 group :development, :test do
-  gem 'mysql2'
   gem 'rspec'
   gem 'byebug'
   gem 'better_errors'
@@ -29,5 +29,4 @@ end
 
 group :production do
   gem 'passenger'
-  gem 'mysql2'
 end
