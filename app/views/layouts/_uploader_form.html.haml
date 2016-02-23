@@ -3,15 +3,12 @@
     .row
       .container{style: "margin-top:100px;"}
         = simple_form_for :article, url: articles_path, :html => {:multipart => true } do |f|
-          %label Upload
-          .form-group.form-inline
-            = f.label :document, 'PDF'
+          .form-group
             = f.input :document, as: :file
+          .form-group.form-inline
             = f.text_field :title, class: 'form-control name-input', placeholder: 'title'
             = f.text_field :volume, class: 'form-control', placeholder: 'volume #'
             = f.text_field :issue, class: 'form-control', placeholder: 'issue #'
             = f.button :submit, 'SUBMIT', class: "btn btn-primary btn-lg round outline"
 
-      .container{style: "margin-top:100px;"}
-        - Article.all.each do |article|
-          = link_to article.document.url
+      = render "layouts/pdfs"

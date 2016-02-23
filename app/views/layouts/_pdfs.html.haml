@@ -1,0 +1,4 @@
+.container{style: "margin-top:30px;"}
+  - Article.all.each do |article|
+    = link_to "#{article.document_file_name}", "/documents/#{article.document_file_name}", format: :pdf
+    %br

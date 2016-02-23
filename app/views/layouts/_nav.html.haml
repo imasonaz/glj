@@ -1,13 +1,9 @@
 .navbar.navbar-default.navbar-fixed-top
-  .container
+  .container{style: "padding-bottom:30px;"}
     .navbar-header
-      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{:href => "#"}
-    .navbar-collapse.collapse
+      %a.navbar-brand{:href => "/list", target: "blank"}
+        = image_tag("logo.png")
       %ul.nav.navbar-nav.navbar-right
-        %li.active
+        %li.active.pull-right{style: "padding-right:30px;"}
           - if user_signed_in?
-            = link_to "sign out", destroy_user_session_path, method: :delete
+            = link_to "sign out", destroy_user_session_path, style: "padding: 7px !important;", method: :delete

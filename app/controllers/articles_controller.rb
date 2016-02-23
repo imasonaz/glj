@@ -1,6 +1,12 @@
 class ArticlesController < ActionController::Base
-  before_action :authenticate_user!, except: [:show_page]
+  before_action :authenticate_user!, except: [:list]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+
+  def index
+  end
+
+  def list
+  end
 
   def create
     @article = Article.new(article_params)

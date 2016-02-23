@@ -9,7 +9,8 @@ Rails.application.routes.draw do
     end
 
     unauthenticated do
-      root 'devise/sessions#new', as: :unauthenticated_root
+      root "articles#list"
+      match 'login' => 'devise/sessions#new', as: :unauthenticated_root, via: [:get]
     end
   end
 end
