@@ -1,0 +1,4 @@
+.container{style: "margin-top:30px;"}
+  - Article.all.each do |article|
+    = link_to "Volume #{article.volume} - Issue #{article.issue} : #{article.title} by #{article.author}", "/#{article.document_file_name}", format: :pdf
+    %br

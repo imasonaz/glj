@@ -1,0 +1,6 @@
+.container{style: "margin-top:30px;"}
+  - Article.all.each do |article|
+    .row
+      = link_to "Volume #{article.volume} - Issue #{article.issue} : #{article.title} by #{article.author}", "/#{article.document_file_name}", format: :pdf
+      = button_to 'delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' }
+    %br
